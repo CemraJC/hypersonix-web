@@ -1,0 +1,22 @@
+/* 
+	Main style set for Hypersonix webpage
+
+	Author: Jason Storey
+	Date: 07/05/2018
+*/
+
+
+/* 
+	Reset styling and base fonts
+ */
+
+html, body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+	box-sizing: inherit: 
+}

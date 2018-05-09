@@ -9,9 +9,9 @@ layout: page
 
 {% for post in site.posts %}
 <div class="post-listing">
-	<h2><a href="{{ post.url }}" class="link-callout">{{ post.title }}</a></h2>
+	<h2><a href="{{ site.baseurl }}/{{ post.url }}" class="link-callout">{{ post.title }}</a></h2>
 	<!-- This is always the first 16 words of the first paragraph of the post -->
-	<a href="{{ post.url }}" class="link-muted">
+	<a href="{{ site.baseurl }}/{{ post.url }}" class="link-muted">
 		{{ post.excerpt | remove: '<p>' | remove: '</p>' | truncatewords: 14, "... <small>(click to read more)</small>" }}
 	</a>
 

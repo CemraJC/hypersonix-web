@@ -13,8 +13,13 @@
 html, body {
 	padding: 0;
 	margin: 0;
+	height: 100%;
 	box-sizing: border-box;
+}
+
+html, body, p {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.41;
 }
 
 h1, h2, h3, h4 {
@@ -25,8 +30,13 @@ h3, h4 {
 	font-weight: normal;
 }
 
+#scroll-trigger {
+	position: fixed;
+	top: 50%;
+}
+
 * {
-	box-sizing: inherit: 
+	box-sizing: inherit;
 }
 
 
@@ -75,7 +85,95 @@ div.navbar ul li.nav-item a {
 div.content-wrapper {
 	max-width: 850px;
 	margin: 0 auto;
+	padding: 0 60px;
 }
+
+
+/* 
+	Footer styles
+*/
+
+div.footer {
+	padding: 50px 0;
+	margin-top: 100px;
+	background: #1A1A1A;
+}
+
+div.footer p {
+	color: #ABABAB;
+}
+
+
+/* 
+	Main page styles
+*/
+
+div.jumbotron {
+	position: relative;
+	width: 100%;
+	padding: 40% 0;
+	background-image: url("/img/space.png");
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+div.jumbotron h2 {
+	color: #F2F2F2;
+	text-shadow: 0 0 2px #000;
+}
+
+div.jumbotron div#scroll-arrow {
+	/* The position of this is set automatically by JS */
+	/*opacity: 0;*/
+
+	position: absolute;
+	margin: 0 auto;
+	width: 40px;
+	height: 40px;
+	left: 0;
+	right: 0;
+	top: 50px;
+	transform: rotate(45deg);
+	border-right: 2px solid #F2F2F2;
+	border-bottom: 2px solid #F2F2F2;
+}
+
+/* 
+	Contact Form Styling
+*/
+
+form {
+	width: 40%;
+}
+
+form div.input-group {
+	position: relative;
+}
+
+form div.input-group.inline-label label {
+	position: absolute;
+	font-size: 8pt;
+	color: #333333;
+}
+
+form div.input-group label {
+	color: #333333;
+	padding-top: 5px;
+}
+
+form div.input-group input[type=text],
+form div.input-group input[type=email] {
+	border: none;
+	min-width: 80%;
+	border-bottom: 2px solid #1A1A1A;
+	margin: 15pt 0 5px 0;
+}
+
+form div.input-group textarea {
+
+}
+
 
 /* 
 	Utility Styles
@@ -97,8 +195,22 @@ div.content-wrapper {
 	color: #957C81;
 }
 
+.tight-margin {
+	margin: 5px 0;
+}
+
+.link-callout {
+	color: #7BCAEA;
+	text-decoration: none;
+}
+
+.link-muted {
+	color: inherit;
+	text-decoration: none;
+}
+
 .v-spacer-large {
-	margin: 40px 0;
+	margin: 7% 0;
 }
 
 .v-spacer-small {

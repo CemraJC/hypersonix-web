@@ -2,9 +2,13 @@
 <html>
 <head>
 	<title>Hypersonix</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
 </head>
+
+<div id="scroll-trigger"></div>
 <body>
 	<!-- Navigation bar -->
 <div class="navbar">
@@ -12,7 +16,7 @@
 		<img src="/img/logo-top-small.png" alt="Hypersonix Letterhead">
 	</div>
 	<ul>
-		<li class="nav-item"><a href="">Home</a></li>
+		<li class="nav-item"><a href="/">Home</a></li>
 		<li class="nav-item"><a href="/about.html">Inside Story</a></li>
 		<li class="nav-item"><a href="/post_index.html">Articles</a></li>
 		<li class="nav-item"><a href="/contact.html">Contact</a></li>
@@ -21,7 +25,13 @@
 
 <!-- Main page contents -->
 <div class="content-wrapper">
-	<p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+	<div class="post-header">
+	<h1 class="tight-margin">Welcome to Space!</h1>
+	<small>Article Published: 07/05/2018&nbsp;&nbsp;|&nbsp;&nbsp;Tags: <i>space, update</i></small>
+</div>
+<div class="v-spacer-small">&nbsp;</div>
+
+<p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
 
@@ -36,6 +46,24 @@
 <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
 
+
+<div class="v-spacer-large">&nbsp;</div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+	<div class="content-wrapper">
+		<p>Website built by the Hypersonix web team.</p>
+		<p>
+			<small>&copy;2018 All rights reserved. Last build: 2018-05-08 </small>
+		</p>
+	</div>
 </div>
 </body>
+
+<!-- Animation library -->
+<script type="text/javascript" src="/js/velocity.min.js"></script>
+<script type="text/javascript" src="/js/scrollmagic.min.js"></script>
+<!-- Main Javascript -->
+<script type="text/javascript" src="/js/main.js"></script>
 </html>

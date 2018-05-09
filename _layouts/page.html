@@ -8,7 +8,7 @@ layout: default
 		<img src="{{site.baseurl}}/img/logo-top-small.png" alt="Hypersonix Letterhead">
 	</div>
 	<ul>
-		<li class="nav-item"><a href="{{site.baseurl}}">Home</a></li>
+		<li class="nav-item"><a href="{{site.baseurl}}/">Home</a></li>
 		<li class="nav-item"><a href="{{site.baseurl}}/about.html">Inside Story</a></li>
 		<li class="nav-item"><a href="{{site.baseurl}}/post_index.html">Articles</a></li>
 		<li class="nav-item"><a href="{{site.baseurl}}/contact.html">Contact</a></li>
@@ -18,4 +18,14 @@ layout: default
 <!-- Main page contents -->
 <div class="content-wrapper">
 	{{ content }}
+</div>
+
+<!-- Footer -->
+<div class="footer">
+	<div class="content-wrapper">
+		<p>Website built by the Hypersonix web team.</p>
+		<p>
+			<small>&copy;{{ site.time | date: '%Y' }} All rights reserved. Last build: {{ site.time | date: "%Y-%m-%d" }} </small>
+		</p>
+	</div>
 </div>

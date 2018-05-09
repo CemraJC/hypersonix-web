@@ -2,10 +2,20 @@
 <html>
 <head>
 	<title>{{ site.title }}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
 </head>
+
+<div id="scroll-trigger"></div>
 <body>
 	{{ content }}
 </body>
+
+<!-- Animation library -->
+<script type="text/javascript" src="{{site.baseurl}}/js/velocity.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/js/scrollmagic.min.js"></script>
+<!-- Main Javascript -->
+<script type="text/javascript" src="{{site.baseurl}}/js/main.js"></script>
 </html>

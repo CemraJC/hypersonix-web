@@ -18,7 +18,11 @@ layout: page
 	</div>
 	<div class="input-group">
 		<label for="contact-message">Message</label>
-		<textarea id="contact-message" required name="message"></textarea>
+		<textarea id="contact-message" required name="message" spellcheck="true" maxlength="300"></textarea>
+		<small> <!-- tiny! -->
+			<!-- Todo: add a quick display of characters left -->
+			<small class="text-muted" for="contact-message">(Max characters: 300)</small>
+		</small>
 	</div>
 	<button type="submit">Send Message</button>
 </form>

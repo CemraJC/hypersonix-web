@@ -17,26 +17,34 @@ layout: page
 
 <!-- Some content -->
 
+<div class="v-spacer-large">&nbsp;</div>
+
 <div class="image-block">
-	<img src="{{site.baseurl}}/img/satelite.png" alt="A picture of a satelite">
+	<div class="image">
+		<img src="{{site.baseurl}}/img/satelite.png" alt="A picture of a satelite">
+	</div>
 	<div class="text">
 		<h1>Satelites</h1>
-		<p>These big ol hurtling bits of metal that fly around the earth at hundreds or thousands of kilometers per hour! Yeah, humans intentionally put them there. You think your custom toaster that laser engraves the weather is cool? Try making one that is remote controlled, solar powered, and sends data to you from space!</p>
+		<p class="text-muted-body">These big ol hurtling bits of metal that fly around the earth at hundreds or thousands of kilometers per hour! Yeah, humans intentionally put them there. You think your custom toaster that laser engraves the weather is cool? Try making one that is remote controlled, solar powered, and sends data to you from space!</p>
 	</div>
 </div>
 
 <div class="image-block">
 	<div class="text">
 		<h1>More Satelites</h1>
-		<p>Yeah, about that space toaster thing.... Good luck toasting in space without some sort of enclosure. Might as well just give up and toast your bread like a normal person - on the ground. Well, not literally on the ground. I meant with a normal toaster in a kitchen or something. You can only toast on the ground in Australia and some parts of Africa.</p>
+		<p class="text-muted-body">Yeah, about that space toaster thing.... Good luck toasting in space without some sort of enclosure. Might as well just give up and toast your bread like a normal person - on the ground. Well, not literally on the ground. I meant with a normal toaster in a kitchen or something. You can only toast on the ground in Australia and some parts of Africa.</p>
 	</div>
-	<img src="{{site.baseurl}}/img/satelite.png" alt="A picture of a satelite">
+	<div class="image">
+		<img src="{{site.baseurl}}/img/satelite.png" alt="A picture of a satelite">
+	</div>
 </div>
+
+<div class="v-spacer-large">&nbsp;</div>
 
 <div class="text-block centered">
 	<h4>Hypersonix is pretty cool man. You should probably sign up for the newsletter, ey?</h4>
-	<form action="mailchimp" method="POST">
-		<input type="email" name="news-email">
-		<button>Get the down low.</button>
+	<form class="centered" action="mailchimp" method="POST">
+		<input type="email" placeholder="Email address" required name="news-email">
+		<button type="submit">Get the down low.</button>
 	</form>
 </div>

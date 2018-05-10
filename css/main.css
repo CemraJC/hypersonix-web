@@ -40,6 +40,7 @@ h3, h4 {
 
 * {
 	box-sizing: inherit;
+	font-family: inherit;
 }
 
 
@@ -89,6 +90,27 @@ div.content-wrapper {
 	max-width: 850px;
 	margin: 0 auto;
 	padding: 0 60px;
+}
+
+div.image-block {
+	display: flex;
+	margin: 30px 0;
+}
+
+div.image-block .text {
+	width: 60%;
+}
+
+div.image-block .image {
+	display: flex;
+	align-items: center;
+	padding: 0 60px;
+	vertical-align: middle;
+	width: 40%;
+}
+
+div.image-block .image img {
+	width: 100%;
 }
 
 
@@ -155,26 +177,72 @@ form div.input-group {
 }
 
 form div.input-group.inline-label label {
+	display: inline-block;
 	position: absolute;
 	font-size: 8pt;
-	color: #333333;
+	padding-bottom: 0;
 }
 
 form div.input-group label {
+	display: block;
 	color: #333333;
-	padding-top: 5px;
+	font-size: 9pt;
+	padding-top: 15px;
+	padding-bottom: 10px;
 }
 
-form div.input-group input[type=text],
-form div.input-group input[type=email] {
+form input {
+	font-family: 'Roboto', sans-serif;
+}
+
+form input[type=text],
+form input[type=email] {
 	border: none;
-	min-width: 80%;
+	width: 100%;
 	border-bottom: 2px solid #1A1A1A;
+	padding: 5px 2px;
 	margin: 15pt 0 5px 0;
+
+	transition: border-color 400ms;
 }
 
 form div.input-group textarea {
+	width: 100%;
+	min-height: 80px;
+	max-height: 200px; /* Actual good height. Encourage short messages */
+	resize: vertical;
+	border: 1px solid #555555;
+}
 
+form button[type=submit] {
+	cursor: pointer;
+
+	margin: 10px 0;
+	padding: 10px 20px;
+
+	border: none;
+	border-radius: 2px;
+
+	background: #1A1A1A;
+	color: #FAFAFA;
+	font-family: 'Roboto',  sans-serif;
+
+	box-shadow: 0 0 10px #666666;
+}
+
+form button[type=submit]:active {
+	box-shadow: 0 0 4px #111111;
+	background: #111111;
+}
+
+form input:focus {
+	border-color: #5595D7;
+}
+
+form input:focus,
+form textarea:focus,
+form button[type=submit]:focus {
+	outline: none;
 }
 
 
@@ -196,6 +264,10 @@ form div.input-group textarea {
 
 .text-muted {
 	color: #957C81;
+}
+
+.text-muted-body {
+	color: #444444;
 }
 
 .tight-margin {

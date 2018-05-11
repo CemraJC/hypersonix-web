@@ -17,6 +17,7 @@ html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
+	min-width: 370px; /* Lock bad elements */
 	box-sizing: border-box;
 }
 
@@ -87,14 +88,16 @@ div.navbar ul li.nav-item a {
 */
 
 div.content-wrapper {
-	max-width: 850px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 60px;
 }
 
 div.image-block {
 	display: flex;
-	margin: 30px 0;
+	opacity: 0;
+	max-width: 850px;
+	margin: 30px auto;
 }
 
 div.image-block .text {
@@ -138,7 +141,7 @@ div.jumbotron {
 	width: 100%;
 	padding: 40% 0;
 	background-image: url("../img/space.png");
-	background-size: auto 100%;
+	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -159,7 +162,7 @@ div.jumbotron div#scroll-arrow {
 	left: 0;
 	right: 0;
 	top: 50px;
-	transform: rotate(45deg);
+	transform: rotate(45deg) !important;
 	border-right: 2px solid #F2F2F2;
 	border-bottom: 2px solid #F2F2F2;
 }
@@ -169,7 +172,8 @@ div.jumbotron div#scroll-arrow {
 */
 
 form {
-	width: 40%;
+	min-width: 300px;
+	width: 55%;
 }
 
 form div.input-group {
@@ -180,6 +184,7 @@ form div.input-group.inline-label label {
 	display: inline-block;
 	position: absolute;
 	font-size: 8pt;
+	top: -4pt;
 	padding-bottom: 0;
 }
 
@@ -188,8 +193,58 @@ form div.input-group label {
 	color: #333333;
 	font-size: 9pt;
 	padding-top: 15px;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 }
+
+form div.input-group-row {
+	display: flex;
+}
+
+form div.input-group-boxed label {
+	display: block;
+	width: 100%;
+	font-size: 9pt;
+	letter-spacing: 1px;
+	margin: 4px 0;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+form div.input-group-boxed input {
+	display: inline-block;
+	vertical-align: top;
+
+	margin: 0;
+	padding: 5px 10px;
+
+	border: 1px solid #222222;
+}
+
+form div.input-group-boxed button {
+	display: inline-block;
+	width: 15%;
+	min-width: 50px;
+	padding: 0 2px;
+	margin: 0 0 0 -1px;
+	border-radius: 0;
+	border: 1px solid #222222;
+
+	color: #222222;
+	font-size: 16pt;
+	background: none;
+	
+	box-shadow: none;
+	transition: background 200ms, color 200ms;
+}
+
+form div.input-group-boxed button:hover {
+	background: #343434;
+	color: #FEFEFE;
+}
+
+form div.input-group-boxed button:focus {
+	box-shadow: none;
+}	
 
 form input {
 	font-family: 'Roboto', sans-serif;
@@ -254,6 +309,10 @@ form button[type=submit]:focus {
 	text-align: center;
 }
 
+.block-centered {
+	margin: 0 auto;
+}
+
 .uppercase {
 	text-transform: uppercase;
 }
@@ -288,6 +347,45 @@ form button[type=submit]:focus {
 	margin: 7% 0;
 }
 
+.v-spacer-medium {
+	margin: 5% 0;
+}
+
 .v-spacer-small {
 	margin: 5px 0;
+}
+
+
+/* 
+	Media Queries
+*/
+
+@media screen and (max-width: 750px) {
+	div.content-wrapper {
+		margin: 0 10%;
+		padding: 0;
+	}
+
+	div.image-block {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	div.image-block .image {
+		width: 60%;
+		margin: 30px auto;
+		padding: 0 10px;
+	}
+
+	div.image-block .text {
+		width: 100%;
+		text-align: justify;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	div.navbar ul li.nav-item {
+		display: block;
+		margin: 10px 0;
+	}
 }

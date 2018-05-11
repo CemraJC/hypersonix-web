@@ -14,11 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	scroll_arrow = document.getElementById("scroll-arrow");
 	var total_height = window.innerHeight;
 	var reference_height = document.querySelector("div.jumbotron").offsetTop;
-	var desired_position = Math.min(String((total_height - 70) - reference_height), 500);
-	console.log(desired_position);
+	var desired_position = Math.min(String((total_height - 100) - reference_height), 500);
 
-	if (desired_position > 280 && desired_position < 360) {
-		desired_position = 280; // Clamp before runs over text
+	if (desired_position > 250 && desired_position < 320) {
+		desired_position = 250; // Clamp before runs over text
 	}
 
 	// Set position to reference
@@ -26,30 +25,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Set opacity to reference
 	scroll_arrow.style.opacity = 1;
 
-	// Start animation position
-	scrollArrowIn()
-
-	// build scene
-	var scene = new ScrollMagic.Scene({duration: 50, offset: desired_position / 2})
+	// Scroll arrow fade out
+	var scene = new ScrollMagic.Scene({triggerElement: "#scroll-arrow"})
+					.setVelocity("#scroll-arrow", {opacity: 0}, {duration: 400})
 					.addTo(controller);
 
-	// Fade in at start
-	scene.on("start", function() {
-		scrollArrowIn();
-	})
-
-	// Fade out on leave
-	scene.on("end", function() {
-		scrollArrowOut();
-	})
+	// Paragraph fade ins
+	var scene = new ScrollMagic.Scene({triggerElement: ".image-block", offset: -200})
+					.setVelocity(".image-block", {opacity: 1, translateY: -20}, {duration: 400})
+					.addTo(controller);
 });
-
-function scrollArrowIn() {
-	scroll_arrow.velocity({opacity: 1});
-	scroll_arrow.velocity({opacity: 0.5}, {loop: true, reverse: true, duration: 2000, delay: 500});
-}
-
-function scrollArrowOut() {
-	scroll_arrow.velocity("stop", true);
-	scroll_arrow.velocity({opacity: 0});
-}
